@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HW2</title>
+    </head>
+    <body>
+        <div style="display:flex;">
+            <div>
+                <table>
+                    <tr>
+                      <th>Red</th>
+                      <th>Yelllow</th>
+                      <th>Green</th>
+                      <th>Purple</th>
+                      <th>Blue</th>
+                      <th>Orange</th>
+                    </tr>
+                    <tr>
+                      <td class="clickable" onclick="HelloWorld('1')" style=" background-color: darkred; height:50px; width:50px;"></td>
+                      <td class="clickable" onclick="HelloWorld('2')" style=" background-color: rgb(244, 244, 56); height:50px; width:50px;">   </td>
+                      <td class="clickable" onclick="HelloWorld('3')" style=" background-color: rgb(60, 209, 60); height:50px; width:50px;">   </td>
+                      <td class="clickable" onclick="HelloWorld('4')" style=" background-color: rgb(204, 142, 204); height:50px; width:50px;">   </td>
+                      <td class="clickable" onclick="HelloWorld('5')" style=" background-color: rgb(67, 67, 245); height:50px; width:50px;">   </td>
+                      <td class="clickable" onclick="HelloWorld('6')" style=" background-color: rgb(254, 189, 69); height:50px; width:50px;">   </td>
+                    </tr>
+                  </table>
+                  <p id="helloworld">Hello World!</p>
+            </div>
+            <p id="list" style="margin-left:30px;"></p>
+        </div>
+        
+          
+          <script>
+            var array =[];
+            function HelloWorld(n){
+                if(n==1){
+                    document.getElementById("helloworld").style.color = "darkred";
+                    array.push("Red");
+                }else if(n==2){
+                    document.getElementById("helloworld").style.color = "rgb(244, 244, 56)";
+                    array.push("Yellow");
+                }else if(n==3){
+                    document.getElementById("helloworld").style.color = "rgb(60, 209, 60)";
+                    array.push("Green");
+                }else if(n==4){
+                    document.getElementById("helloworld").style.color = "rgb(204, 142, 204)";
+                    array.push("Purple");
+                }else if(n==5){
+                    document.getElementById("helloworld").style.color = "rgb(67, 67, 245)";
+                    array.push("Blue");
+                }else if(n==6){
+                    document.getElementById("helloworld").style.color = "rgb(254, 189, 69)";
+                    array.push("Orange");
+                }
+                document.getElementById("list").innerHTML = array.join("<br> ");
+            }
+          </script>
+    </body>
+</html>
